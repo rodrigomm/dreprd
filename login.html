@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><style type="text/css">#ibox {z-index:1000000;text-align:left;} #ibox_overlay {z-index:1000000;} #ibox_loading {position:absolute;z-index:1000001;} #ibox_wrapper {margin:30px;position:absolute;top:0;left:0;z-index:1000001;} #ibox_content {z-index:1000002;margin:27px 5px 5px 5px;padding:2px;} #ibox_content object {display:block;} #ibox_content .ibox_image {width:100%;height:100%;margin:0;padding:0;border:0;display:block;} #ibox_footer_wrapper a {float:right;display:block;outline:0;margin:0;padding:0;} #ibox_footer_wrapper {text-align:left;position:absolute;top:5px;right:5px;left:5px;white-space:nowrap;overflow:hidden;}</style><style type="text/css">#ibox_footer_wrapper {font-weight:bold;height:20px;line-height:20px;} #ibox_footer_wrapper a {text-decoration:none;background:#888;border:1px solid #666;line-height:16px;padding:0 5px;color:#333;font-weight:bold;font-family:Verdana, Arial, Helvetica, sans-serif;font-size:10px;} #ibox_footer_wrapper a:hover {background-color:#bbb;color:#111;} #ibox_footer_wrapper {font-size:12px;font-family:Verdana, Arial, Helvetica, sans-serif;color:#111;} #ibox_wrapper {border:1px solid #ccc;} #ibox_wrapper {background-color:#999;}#ibox_content {background-color:#eee;border:1px solid #666;} #ibox_loading {padding:50px; background:#000;color:#fff;font-size:16px;font-weight:bold;}</style>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin CP</title>
+
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/animate.css" rel="stylesheet">
+    <link href="static/css/font-awesome/font-awesome.css" rel="stylesheet">
+    <link href="static/css/jquery-ui.css" rel="stylesheet">
+    <link href="static/css/fam-icons.css" rel="stylesheet">
+
+    <link href="static/css/bootstrap-dialog.css" rel="stylesheet">
+    <link href="static/css/mm-admin.css" rel="stylesheet">
+
+    <script src="static/js/jquery.js"></script>
+    <script src="static/js/jquery-ui.js"></script>
+
+    
+    <link rel="ICON" href="favicon.ico">
+
+</head>
+
+<body>    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-heading">
+                        <span style="float:right"><i class="fa fa-lock fa-fw"></i></span>
+                        <h3 class="panel-title">- Administration -</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form">
+                            <fieldset>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Username" onkeyup="if(jQuery('#errors')){jQuery('#errors').slideUp()}" onkeypress="if(mm_getKeyCode(event)==13){mm_login()}" type="text" name="user" value="admin" autofocus="">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Password" onkeyup="if(jQuery('#errors')){jQuery('#errors').slideUp()}" onkeypress="if(mm_getKeyCode(event)==13){mm_login()}" type="password" name="pass" value="admin">
+                                </div>
+                                <div class="alert alert-warning" id="errors" style="display:none">
+                                 <span></span>
+                                </div>
+                                <button class="btn btn-lg btn-success btn-block" type="button" onclick="mm_login()">Login</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  <script src="static/js/bootstrap.min.js"></script>
+  <script src="templates/js/plugins/bootstrap.dialog.js"></script>
+  <script src="templates/js/plugins/jquery.metismenu.js"></script>
+  <script src="templates/js/plugins/jquery.ibox.js"></script>
+
+  
+  <script src="templates/js/mm-admin.js"></script>
+
+
+
+<div id="ibox"><div id="ibox_overlay" style="display: none; opacity: 0; position: absolute; top: 0px; left: 0px; width: 100%;"></div><div id="ibox_loading" style="display: none;">Loading...</div><div id="ibox_wrapper" style="position: absolute; top: 0px; left: 0px; display: none;"><div id="ibox_content" style="overflow: auto;"></div><div id="ibox_footer_wrapper"><a href="javascript:void(0)">Close</a><div id="ibox_footer">&nbsp;</div></div></div></div></body></html>
